@@ -55,5 +55,46 @@ print(np.delete(b, 1,axis=1))      # 删除b的第一列
 print(np.delete(b, [1,2], axis=0)) # 删除b的第1行和第2行
 print(np.delete(b, [1,3], axis=1)) # 删除b的第1列和第3列
 
+# 在数组中查找元素
+
+a = np.array((1,2,3,5,3,4))
+pos = np.argwhere(a==3)
+print(pos)  #[[2] [4]]
+a = np.array([[1,2,3], [4,5,2]])
+pos = np.argwhere(a==2)
+print(pos) #[[0 1] [1 2]]
+
+# 抽取a中大于2的元素形成一个一维数组
+b = a[a>2]
+print(b)  #[3 4 5]
+a[a > 2] = -1   #[[1 2 -1] [-1 -1 2]]
+
+
+
+# 数学运算
+
+a = np.array((1,2,3,4))
+b = a+1  # [2 3 4 5]
+print(b)
+print(a*b) # [2 6 12 20]
+print(a+b) # [3 5 7 9]
+c = np.sqrt(a*10)  #[10 20 30 40]
+print(c)
+
+
+print("--------------------------")
+print("数组切片")
+# 数组切片
+
+a = np.arange(8)
+b = a[3:6] # b是a的一部分
+print(b)
+c = np.copy(a[3:6]) #c是a的一部分的拷贝
+b[0] = 100
+print(a)   #a的值会改变
+print(c)   #c的值不会变化
+a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
+b = a[1:3, 1:4]
+
 
 
