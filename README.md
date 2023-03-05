@@ -47,4 +47,39 @@ numpy数组一旦生成，元素就不能增删，会返回一个新的数组
 
 numpy的切片是原数组的一部分，而非一部分的拷贝
 
+## pandas
 
+### Series
+
+增删查改
+
+增
+- 直接新建，或者append
+
+删
+- pop
+
+### DataFrame
+
+#### dataframe的构造和访问
+
+
+#### dataframe的切片与统计
+
+- iloc[行选择器, 列选择器] 用下标做切片
+- loc[行选择器, 列选择器] 用标签做切片
+
+#### 分析统计
+- df.T : 转置矩阵
+- df.sort_values('语文',ascending=False) # #按语文成绩降序排列
+- df.sum()['语文'] 
+- df.mean()['数学']
+- df.median()['英语']
+- df.min()['语文']
+- df.max()['数学']
+
+
+#### 修改和增删
+
+- df.insert
+- df.drop
